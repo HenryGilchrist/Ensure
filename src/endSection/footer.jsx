@@ -1,6 +1,6 @@
-import LogoSymbol from "./assets/icons/logoSymbol";
+function Footer(){
 
-const sectionLinks = [
+    const sectionLinks = [
     {
         title: "Get in touch",
         links: 
@@ -38,10 +38,7 @@ const sectionLinks = [
                 "Mon – Fri : 9 am – 8 pm EST",
                 "Call us +44 717-514-0901"
             ]
-    }
-]
-
-function Footer(){
+    }]
 
     return(
         <div className="footer">

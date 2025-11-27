@@ -1,5 +1,5 @@
-import FullStar from "./assets/icons/fullStar";
-import HalfStar from "./assets/icons/halfStar";
+import FullStar from "../assets/icons/fullStar";
+import HalfStar from "../assets/icons/halfStar";
 
 import { useEffect, useState } from 'react'
 

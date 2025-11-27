@@ -1,10 +1,10 @@
-import ApiIcon from './assets/icons/apiSymbol.jsx'
-import DropdownOption from "./dropdownOption.jsx";
-import DropdownButton from './dropdownButton.jsx';
-import HalfScreenDropdownMenu from './halfScreenDropdownMenu.jsx';
+import ApiIcon from '../assets/icons/apiSymbol.jsx'
+import DropdownOption from "../dropdown/dropdownOption.jsx";
+import DropdownButton from '../dropdown/dropdownButton.jsx';
+import HalfScreenDropdownMenu from '../dropdown/halfScreenDropdownMenu.jsx';
 import ReviewAPIRow from './reviewAPIRow.jsx';
 import ReviewAPIPageButtons from './reviewAPIPageButtons.jsx';
-import SliderInput from './slider.jsx';
+import SliderInput from '../dropdown/slider.jsx';
 import CreateReviewWindow from './createReviewWindow.jsx';
 
 import { useState, useEffect, useRef } from 'react';

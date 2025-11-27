@@ -38,14 +38,14 @@
   --featuredReviewCellWrapperPadding: 2rem;
   --featuredReviewSlideTime: 0.4s;
   --featuredReviewGalleryMarginLeft: calc((100vw - var(--featuredReviewCellWidth)) / 2);
-  --writeReviewStarWidth: 2.8rem;
-  --writeReviewStarMargin: 0.3rem;
+  --writeReviewStarWidth: 2.65rem;
+  --writeReviewStarMargin: 0.4rem;
   --reviewAPIWidth: min(1350px, 80vw);
-  --reviewAPIHeight: min(850px, 75vh);
+  --reviewAPIHeight: min(800px, 60vh);
   --reviewAPIButtonWidth: 11rem;
   --reviewAPIButtonHeight: 3rem;
   --reviewAPIPadding: 4rem;
-  --reviewAPIButtonLeftPadding: 1.2rem;
+  --reviewAPIButtonLeftPadding: 0.3em;
   --reviewAPIButtonBorderRadius: 0.3rem;
 
 
@@ -170,7 +170,7 @@ header {
   flex-direction: column;
   align-items: baseline;
   justify-content: space-between;
-  padding: 20px;
+  padding: 1.4rem;
   height: 355px;
   max-width: 100%;
   width: 300px;
@@ -281,7 +281,7 @@ header {
   width: var(--openingContentSectionWidth);
   position: relative;
   margin: auto;
-  padding-top: 96px;
+  padding-top: 6rem;
 }
 
 .opening-text-wrapper {
@@ -355,6 +355,80 @@ header {
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: -0.035em;
+}
+
+.recognition-wrapper {
+  width: var(--openingContentSectionWidth);
+  color: hsl(95, 7%, 33%);
+  margin: 8rem auto 9.3rem auto;
+  background-color: var(--awardsBGBeige);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2rem 1rem 2rem 5rem;
+}
+
+.recognition-logo-section {
+  overflow: hidden;
+  --sliderPadding: 7rem;
+  padding: 0 var(--sliderPadding);
+  position: relative;
+}
+
+.recognition-logo-section::after {
+  content: "";
+  z-index: 4;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, var(--awardsBGBeige) 0%, transparent 10% 90%, var(--awardsBGBeige));
+  background-size: cover;
+}
+
+.recognition-cell-slider {
+  display: flex;
+  gap: 2.8rem;
+  height: 2rem;
+  animation: scroll-across 40s linear infinite;
+}
+
+@keyframes scroll-across {
+  from {
+    transform: translateX(calc(100% + var(--sliderPadding) + 2rem));
+  }
+
+  to {
+    transform: translateX(calc((100% + var(--sliderPadding) + 2rem) * -1));
+  }
+}
+
+.logo-cell {
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo-cell:nth-child(1) {
+  width: 9.45rem;
+}
+
+.logo-cell:nth-child(2) {
+  width: 8.1rem;
+}
+
+.logo-cell:nth-child(3) {
+  width: 4.32rem;
+}
+
+.logo-cell:nth-child(4) {
+  width: 8.64rem;
+}
+
+.logo-cell:nth-child(5) {
+  width: 8.1rem;
 }
 
 /*
@@ -432,16 +506,6 @@ header {
   margin: 0 auto;
 }
 
-.faq-pairt {
-  border-bottom: 2px solid var(--textBlack);
-  box-sizing: border-box;
-  padding: 2rem 3.5rem;
-  border-radius: 0.15rem;
-  margin-bottom: 3rem;
-  background-color: hsla(201, 25%, 37%, 0.2);
-  --whiteish: hsl(204, 10%, 95%);
-}
-
 .faq-title {
   color: var(--endButtonSectionTan);
   font-size: 3rem;
@@ -455,7 +519,8 @@ header {
 .faq-question {
   position: relative;
   width: fit-content;
-  color: hsl(207, 6.5%, 65%);
+  color: var(--buttonGreen);
+  --gray: hsl(207, 6.5%, 65%);
   margin: 3rem auto 1rem auto;
   line-height: 1.24;
   font-weight: 500;
@@ -479,7 +544,7 @@ header {
 
 .review-section-wrapper {
   background-color: var(--featuredReviewSectionGreen);
-  padding: 9rem 0 3rem 0;
+  padding: 7rem 0 3rem 0;
   margin: 8rem 0 4rem 0;
 }
 
@@ -493,7 +558,7 @@ header {
   color: white;
   position: relative;
   width: calc( 2 * var(--paddingSize) + var(--otherContentSectionWidth));
-  margin: 0 auto 8rem auto;
+  margin: 0 auto 6rem auto;
   --paddingSize: 3em;
   font-size: 4rem;
   box-sizing: border-box;
@@ -664,7 +729,7 @@ header {
   font-size: 3.5rem;
   font-weight: 600;
   letter-spacing: -0.0rem;
-  margin: 8.5rem auto 0 auto;
+  margin: 6.5rem auto 0 auto;
   width: fit-content;
 }
 
@@ -1043,7 +1108,7 @@ header {
 .dropdown-menu-blur {
   backdrop-filter: blur(12px);
   background-color: hsla(0, 0%, 0%, 0.357);
-  flex: 0 0 65%;
+  flex: 0 0 70%;
   opacity: 0;
   position: relative;
   animation: appear ease-in-out 0.4s forwards 0.05s;
@@ -1055,11 +1120,11 @@ button {
 
 
 .dropdown-menu-window {
-  --updateButtonHeight: 6rem;
+  --updateButtonHeight: 5rem;
   --topMargin: 1.6rem;
   --buttonMargin: 3rem;
   padding: var(--topMargin) 0 var(--updateButtonHeight) 0;
-  flex: 0 0 35%;
+  flex: 0 0 30%;
   position: relative;
   box-sizing: border-box;
   background-color: white;
@@ -1096,7 +1161,7 @@ button {
   width: 100%;
   line-height: 1.3;
   text-align: center;
-  font-size: 2.7rem;
+  font-size: 2.2rem;
   font-weight: 500;
   letter-spacing: -0.02rem;
   color: var(--textBlack);
@@ -1138,7 +1203,7 @@ button {
   cursor: pointer;
   height: var(--updateButtonHeight);
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   border-radius: 0;
   font-weight: 300;
   letter-spacing: 0.06rem;
@@ -1163,14 +1228,14 @@ button {
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin: 0.2rem auto 0 auto;
+  margin: 1.1rem auto 0 auto;
 }
 
 .slider-range-text > * {
   border: 1px solid var(--textGrey);
   border-radius: 0.2rem;
-  padding: 0.6rem 0;
-  font-size: 1.1rem;
+  padding: 0.5em 0;
+  font-size: 1rem;
   text-align: center;
   width: 70px;
   letter-spacing: -0.02rem;
@@ -1188,8 +1253,8 @@ button {
 }
 
 .dropdown-option-cell.dropdown-menu {
-  font-size: 1rem;
-  line-height: 2.8;
+  font-size: 0.9rem;
+  line-height: 2.4;
 }
 
 
@@ -1200,11 +1265,11 @@ button {
   color: var(--textGrey);
   background-color: white;
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 400;
   letter-spacing: 0.025rem;
   border-radius: 0;
-  padding: 1.5rem var(--reviewAPIButtonLeftPadding);
+  padding: 0.9em var(--reviewAPIButtonLeftPadding);
   box-sizing: border-box;
 
   display: flex;
@@ -1222,7 +1287,7 @@ button {
 
 .review-api-write-review {
   width: var(--reviewAPIWidth);
-  margin: 5.5rem auto;
+  margin: 2.6rem auto 1.5rem auto;
   display: flex;
   flex-direction: column;
   gap: 1.9rem;
@@ -1234,15 +1299,21 @@ button {
 }
 
 .dropdown-button.write-review {
-  color: var(--textBlack);
+  background-color: var(--featuredReviewSectionGreen);
+  color: white;
+  --ratingPadding: 2em;
+  border-radius: 0.52em;
+  padding-left: var(--ratingPadding);
+  padding-right: var(--ratingPadding);
+
   font-weight: 400;
-  font-size: 1.4rem;
-  border-color: var(--textGrey);
+  letter-spacing: 0.03rem;
+  font-size: 1.45rem;
 }
 
 
 .dropdown-button.write-review:hover {
-  border-color: var(--textBlack);
+  background-color: hsl(from var(--featuredReviewSectionGreen) h calc(s - 6) calc(l + 3));
 } 
 
 .create-review-wrapper {
@@ -1272,66 +1343,66 @@ button {
   box-sizing: border-box;
   --windowBorderRadius: 0.5rem;
   --inputBorderRadius: 0.4rem;
-  --inputHeight: 3rem;
+  --inputHeight: 3.5rem;
   --windowHeight: min(90vh, 900px);
-  --submitButtonHeight: 4.5rem;
+  --submitButtonHeight: 5.4rem;
   border-radius: var(--windowBorderRadius);
-  padding: 0 2.4rem calc(var(--submitButtonHeight) + 2.6vh) 2.4rem;
+  padding: 0 0 calc(var(--submitButtonHeight) + 1.8vh) 0;
   animation: appear ease-in-out 0.2s forwards;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.create-review-input-section {
+.create-review-window > * {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  box-sizing: border-box;
-  border-radius: 1.5rem;
+  border-top: 2px solid var(--reviewAPIBackgroundDark);
+}
+
+.create-review-input-top-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .create-review-header {
   width: 100%;
   display: flex;
   position: relative;
-  margin: 1.8rem 0 3rem 0;
-  justify-content: center;
+  box-sizing: border-box;
+  padding: 1.9rem;
+  justify-content: space-between;
   align-items: center;
+  border: none;
 }
 
 .create-review-header .exit-dropdown-menu {
-  position: absolute;
-  --exitSize: 2.2rem;
-  right: 0;
+  --exitSize: 2rem;
 }
 
 .create-review-title {
-  font-size: 3rem;
+  font-size: 2.25rem;
   line-height: 1;
   font-weight: 500;
-  letter-spacing: -0.04rem;
+  letter-spacing: -0.00rem;
   color: var(--textBlack);
 }
 
-.create-review-input-top-section {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 2rem 0rem 0.2rem 0rem;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.create-review-name-input {
-
-}
-
 .create-review-textarea {
-  margin-top: 0.7rem;
   font-family: var(--Segoe);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  background-color: hsl(0, 5%, 98%);
   resize: none;
   box-sizing: border-box;
   border-radius: var(--inputBorderRadius);
   border: 1px solid var(--textGrey);
-  padding: 1rem;
-  width: 100%;
+  position: relative;
+  padding: 1rem 1.15rem;
+  width: calc(100% - (2rem * 2));
   height: 225px;
 }
 
@@ -1341,24 +1412,32 @@ button {
 
 label {
   all: unset;
-  width: fit-content;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 2rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  justify-content: space-between;
+  align-self: center;
   font-weight: 400;
+  font-size: 1rem;
   letter-spacing: -0.02rem;
-  font-size: 0.95rem;
-  color: var(--textGrey);
+  color: var(--textBlack);
+}
+
+label > p {
+all: unset;
+height: fit-content;
+align-self: center;
 }
 
 label > * {
   border: 1px solid var(--textGrey);
+  background-color: hsl(0, 5%, 98%);
   border-radius: var(--inputBorderRadius);
-  color: var(--textBlack);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: var(--Segoe);
-  width: 14rem;
+  width: 60%;
   height: var(--inputHeight);
   box-sizing: border-box;
   padding: 0 0.5rem;
@@ -1366,11 +1445,17 @@ label > * {
 }
 
 .create-review-select-policy option {
+  color: black;
   padding: 4rem 0rem;
+}
+
+.create-review-select-policy:invalid {
+  color: gray;
 }
 
 .create-review-submit {
   position: absolute;
+  cursor: pointer;
   width: calc(100% + 2px);
   left: -1px;
   bottom: -1px;
@@ -1394,22 +1479,27 @@ label > * {
 */
 
 .rating-select-wrapper {
-  width: calc(5 * (var(--writeReviewStarWidth) + var(--writeReviewStarMargin)));
+  width: calc(5 * ((var(--inputHeight) * 0.8) + var(--writeReviewStarMargin)));
   height: var(--inputHeight);
-  margin: 1.1rem 0 0 0;
   position: relative;
-  align-self: flex-end;
+  margin-left: 2rem;
+  padding: 0;
+  border: none;
 }
 
 .rating-select-wrapper > * {
   position: absolute;
-  vertical-align: middle;
+  width: fit-content;
+  height: fit-content;
+  bottom: 0;
   top: 0;
+  margin: auto auto;
+  right: 0;
   left: 0;
 }
 
 .rating-select-star-wrapper > .star-icon {
-  width: var(--writeReviewStarWidth);
+  width: calc(var(--inputHeight) * 0.8);
   margin-right: var(--writeReviewStarMargin);
   stroke-width: 0.25;
   stroke: var(--reviewAPIStarGold);
@@ -1426,9 +1516,8 @@ label > * {
   position: relative;
   display: inline-block;
   padding: 0;
-  margin: 0;
-  width: calc(var(--writeReviewStarWidth) + var(--writeReviewStarMargin));
-  height: var(--writeReviewStarWidth);
+  width: calc((var(--inputHeight) * 0.8) + var(--writeReviewStarMargin));
+  height: calc(var(--inputHeight) * 0.8);
 }
 
 .rating-select-hitbox-cell-half {
@@ -1445,17 +1534,17 @@ label > * {
 
 .end-section {
   display: flex;
-  padding: 5.5rem 0;
+  padding: 4.4rem 0;
   background-color: var(--endButtonSectionTan);
   color: var(--featuredReviewSectionGreen);
-  font-size: 3.55rem;
+  font-size: 3.3rem;
   line-height: 1.25;
   letter-spacing: -0.04rem;
   font-weight: 500;
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .button.end-section-button{
@@ -1494,7 +1583,7 @@ label > * {
 
 .footer {
   background-color: var(--featuredReviewSectionGreen);
-  padding: 4rem 0 2rem 0;
+  padding: 6.5rem 0 2rem 0;
 }
 
 .footer-flex {
@@ -1513,36 +1602,40 @@ label > * {
 
 .link-section ul{
   padding-left: 0;
-  margin-top: 2.1rem;
+  margin-top: 2rem;
 }
 
 .link-section li {
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
-  letter-spacing: -0.04rem;
+  letter-spacing: -0.02rem;
   list-style: none;
-  padding: 0.25em 0;
+  padding: 0.2em 0;
 }
 
 .link-section li:hover {
   text-decoration: underline;
 }
 .link-section:nth-last-child(1) li:nth-last-child(2) {
-  margin: 2.5rem 0;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.link-section:nth-last-child(1) li:nth-last-child(-n + 2) {
+  pointer-events: none;
 }
 
 .footer-line {
   width: var(--otherContentSectionWidth);
   position: relative;
-  margin: 3rem auto;
+  margin: 1.6rem auto;
   border-top: 2px solid hsl(120, 2%, 42%);
 }
 
 .footer-ending-text {
   text-wrap-style: balance;
   color: var(--textGrey);
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: 1.37;
   font-weight: 400;
   letter-spacing: -0.02rem;

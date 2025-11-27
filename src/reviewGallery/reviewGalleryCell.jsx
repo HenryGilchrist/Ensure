@@ -1,5 +1,5 @@
-import FullStar from './assets/icons/fullStar.jsx'
-import HalfStar from './assets/icons/halfStar.jsx'
+import FullStar from '../assets/icons/fullStar.jsx'
+import HalfStar from '../assets/icons/halfStar.jsx'
 
 export function returnStars(reviewRating){
 

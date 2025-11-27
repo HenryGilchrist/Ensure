@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
-import LeftArrowIcon from './assets/icons/leftArrowIcon.jsx'
-import RightArrowIcon from './assets/icons/rightArrowIcon.jsx'
+import LeftArrowIcon from '../assets/icons/leftArrowIcon.jsx'
+import RightArrowIcon from '../assets/icons/rightArrowIcon.jsx'
 import ReviewGalleryCell from './reviewGalleryCell.jsx';
 
 function ReviewGallery({ featuredReviews }){

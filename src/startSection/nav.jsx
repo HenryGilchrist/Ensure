@@ -1,4 +1,4 @@
-import LogoSymbol from "./assets/icons/logoSymbol";
+import LogoSymbol from "../assets/icons/logoSymbol";
 
 function Nav(){
     return (

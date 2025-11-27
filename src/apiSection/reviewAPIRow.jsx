@@ -1,6 +1,6 @@
-import { returnStars } from './reviewGalleryCell'
+import { returnStars } from '../reviewGallery/reviewGalleryCell'
 import ReviewActionButtons from './reviewActionButtons';
-import DropdownButton from './dropdownButton';
+import DropdownButton from '../dropdown/dropdownButton';
 import { EllipsisVertical } from 'lucide-react'
 
 function ReviewAPIRow({ reviewObj, userID, editReview, deleteReview }){

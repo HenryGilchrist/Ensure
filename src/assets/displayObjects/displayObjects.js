@@ -1,22 +1,21 @@
 // Policy Options Images
-import PolicyCouple from './assets/policyOptions/couple.png'
-import PolicyWomanSmiling from './assets/policyOptions/oldWomanSmiling.png'
-import PolicyWomanHospital from './assets/policyOptions/oldWomanHospital.png'
-import PolicyChoices from './assets/policyOptions/laptopChoices.png'
+import PolicyCouple from '../policyOptions/couple.png'
+import PolicyWomanSmiling from '../policyOptions/oldWomanSmiling.png'
+import PolicyWomanHospital from '../policyOptions/oldWomanHospital.png'
+import PolicyChoices from '../policyOptions/laptopChoices.png'
 
 // Collage Images
-import CollageFlexible from './assets/collage/flexible.jpg'
-import CollagePiggyBank from './assets/collage/piggyBank.jpg'
-import CollageEasyStart from './assets/collage/easyStart.jpg'
-import CollageAdvisor from './assets/collage/advisor.png'
+import CollageFlexible from '../collage/flexible.jpg'
+import CollageEasyStart from '../collage/easyStart.jpg'
+import CollageAdvisor from '../collage/advisor.png'
 
 // Featured Review Images
-import ReviewLila from './assets/reviewGallery/lila.jpeg'
-import ReviewCarlaMateo from './assets/reviewGallery/carlaMateo.jpg'
-import ReviewMichael from './assets/reviewGallery/michael.jpg'
-import ReviewSusan from './assets/reviewGallery/susan.jpg'
-import ReviewMaxElana from './assets/reviewGallery/maxElena.jpg'
-import ReviewJohn from './assets/reviewGallery/john.jpeg'
+import ReviewLila from '../reviewGallery/lila.jpeg'
+import ReviewCarlaMateo from '../reviewGallery/carlaMateo.jpg'
+import ReviewMichael from '../reviewGallery/michael.jpg'
+import ReviewSusan from '../reviewGallery/susan.jpg'
+import ReviewMaxElana from '../reviewGallery/maxElena.jpg'
+import ReviewJohn from '../reviewGallery/john.jpeg'
 
 
 export const collagePairs = [
@@ -27,20 +26,6 @@ export const collagePairs = [
       }, 
       image: CollageFlexible
     },
-    {
-      text: {
-        title: "Quick Sign Up", 
-        body: "To get started, simply complete our brief online form, and our guidance team will contact you shortly to schedule your initial meeting."
-      }, 
-      image: CollageEasyStart
-    },
-    {
-      text: {
-        title: "Affordable Options", 
-        body: "Plans that fit your life — and your budget!"
-      }, 
-      image: CollagePiggyBank
-    },
      { 
         text: 
         {
@@ -48,6 +33,13 @@ export const collagePairs = [
           body: "Our experienced advisors take the time to understand your story: both personal and financial — so your plan reflects what matters most to you."
         }, 
         image: CollageAdvisor
+    },
+    {
+      text: {
+        title: "Quick Sign Up", 
+        body: "To get started, simply complete our brief online form, and our guidance team will contact you shortly to schedule your initial meeting."
+      }, 
+      image: CollageEasyStart
     }
   ]
 

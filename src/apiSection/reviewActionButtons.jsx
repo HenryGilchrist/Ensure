@@ -1,7 +1,7 @@
 import { Trash2 } from 'lucide-react'
 import { useState } from 'react'
 import CreateReviewWindow from './createReviewWindow';
-import DropdownButton from './dropdownButton';
+import DropdownButton from '../dropdown/dropdownButton';
 
 function ReviewActionButtons({reviewObj, deleteReview, editReview}){
     const initialValues = {name: reviewObj.name, rating: reviewObj.rating, policy: reviewObj.policy, review: reviewObj.review};
