@@ -1013,8 +1013,9 @@ header {
 
 .dropdown-options-wrapper {
   z-index: 98;
-  position: relative;
+  position: absolute;
   width: 100%;
+  top: 100%;
   border: 1px solid var(--reviewAPIBorder);
   border-top: none;
   border-radius: var(--reviewAPIButtonBorderRadius);
@@ -1029,6 +1030,7 @@ header {
   font-size: 1rem;
   letter-spacing: -0.02rem;
   padding: 0.6rem 0.5rem 0.6rem var(--reviewAPIButtonLeftPadding);
+  border-radius: var(--reviewAPIButtonBorderRadius);
   box-sizing: border-box;
   color: var(--textBlack);
 }
