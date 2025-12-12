@@ -1,7 +1,9 @@
 # Ensure
+https://henrygilchrist.github.io/Ensure/
 
-## Customer Review REST API
-#### Express JS. Uses JWT refresh and access tokens issued in HTTP-0nly cookies. Access token issued at login contain flag authorising sensitive operations - refreshed access tokens do not.
-
-##### Authentication/Registration is handled automatically by React. When Ensure is loaded, a request is made to the API: check if the browser holds a valid refresh token in cookies.
-##### Watch the console to view the process in action.
+## Customer Review API
+•	Customer reviews retrieved from Postgres. URL query string handling enables sorting, filtering and pagination.
+•	Postgres queries are parametrized: No SQL injection.
+•	Once logged in: can post, update and delete reviews. 
+•	Secured authentication by issuing JWT tokens via   HTTP-only cookies:  Reducing exposure to XSS credential theft.
+•	Due to hosting on Vercel: CSRF was a vulnerability. Addressed this by flagging access tokens issued at login, enabling sensitive operations to enforce re-authentication for refreshed access tokens.
